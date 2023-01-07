@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "261289819691",
+    "project_id": "sago-app",
+    "storage_bucket": "sago-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261289819691:android:c7c78b9784814f73fdf46e",
+        "android_client_info": {
+          "package_name": "com.example.sago"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261289819691-5bnmrk6t02kiki8ppd4r78oound103nu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIkqF2vUTi9RLWG41wYonfdmvajsAG1-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261289819691-5bnmrk6t02kiki8ppd4r78oound103nu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "261289819691-fir7smhfmsa2mnb1blevldr7n65vkse4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sago"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261289819691:android:6aba7ce4d9c5aacdfdf46e",
+        "android_client_info": {
+          "package_name": "com.example.sago_user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261289819691-5bnmrk6t02kiki8ppd4r78oound103nu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIkqF2vUTi9RLWG41wYonfdmvajsAG1-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261289819691-5bnmrk6t02kiki8ppd4r78oound103nu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "261289819691-fir7smhfmsa2mnb1blevldr7n65vkse4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sago"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
