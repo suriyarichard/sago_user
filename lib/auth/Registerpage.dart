@@ -1,11 +1,6 @@
-import 'dart:math';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
@@ -36,7 +31,7 @@ class _RegisterPageState extends State<RegisterPage> {
         await FirebaseAuth.instance.createUserWithEmailAndPassword(
             email: _emailController.text.trim(),
             password: _passwordController.text.trim());
-        showDialog(
+      showDialog(
             context: context,
             builder: (BuildContext context) {
               return const AlertDialog(
@@ -124,17 +119,17 @@ class _RegisterPageState extends State<RegisterPage> {
                   //   fontSize: 36,
                   // ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Text(
+                const Text(
                   "Create your new account",
                   style: TextStyle(
                     fontSize: 25,
                     color: Colors.grey,
                   ),
                 ),
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
                 // first name
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -147,7 +142,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _firstnameController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             border: InputBorder.none,
                             icon: Icon(Icons.ads_click_outlined),
                             hintText: "Enter First name"),
@@ -155,7 +150,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
@@ -167,7 +162,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _lastnameController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             border: InputBorder.none,
                             icon: Icon(Icons.near_me),
                             hintText: "Enter Last name"),
@@ -195,7 +190,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 //     ),
                 //   ),
                 // ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Padding(
@@ -209,7 +204,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _emailController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             border: InputBorder.none,
                             icon: Icon(Icons.email),
                             hintText: "Enter Email"),
@@ -217,7 +212,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
@@ -230,7 +225,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       child: TextField(
                         controller: _passwordController,
                         obscureText: true,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             border: InputBorder.none,
                             icon: Icon(Icons.lock),
                             hintText: "Password"),
@@ -238,7 +233,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
 
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -252,7 +247,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       child: TextField(
                         controller: _confirmpasswordController,
                         obscureText: true,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             border: InputBorder.none,
                             icon: Icon(Icons.lock),
                             hintText: "Confirm password"),
@@ -260,19 +255,19 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
 
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: GestureDetector(
                     onTap: signUp,
                     child: Container(
-                      padding: EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         color: Colors.green,
                         borderRadius: BorderRadius.circular(28),
                       ),
-                      child: Center(
+                      child: const Center(
                           child: Text(
                         'Sign Up',
                         style: TextStyle(
@@ -283,14 +278,14 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Already have an account ?"),
+                    const Text("Already have an account ?"),
                     GestureDetector(
                       onTap: widget.showLoginPage,
-                      child: Text(
+                      child: const Text(
                         'Sign In',
                         style: TextStyle(
                             color: Colors.green, fontWeight: FontWeight.bold),
