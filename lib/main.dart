@@ -1,8 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:sago_user/Homescreen.dart';
+import 'package:sago_user/screen/Dashboard/Homescreen.dart';
 import 'package:sago_user/firebase_options.dart';
-import 'package:sago_user/main_page.dart';
+import 'package:sago_user/screen/authCheck/main_page.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,12 +18,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return const MaterialApp(
+      title: 'Sago User',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+
       // home: Homescreen(),
       home: Mainpage(),
     );

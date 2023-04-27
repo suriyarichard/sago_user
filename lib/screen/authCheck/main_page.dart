@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sago_user/auth/Authpage.dart';
-import 'package:sago_user/homescreen.dart';
+import 'package:sago_user/screen/Dashboard/Homescreen.dart';
 
 class Mainpage extends StatelessWidget {
   const Mainpage({super.key});

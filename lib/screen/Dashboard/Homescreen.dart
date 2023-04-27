@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:sago_user/widgets/Listfiles.dart';
-import 'screen/History/historyScreen.dart';
+import 'package:sago_user/screen/profile/userProfile.dart';
+import '../History/historyScreen.dart';
 
 class Homescreen extends StatefulWidget {
   Homescreen({super.key});
@@ -14,7 +14,8 @@ class _HomescreenState extends State<Homescreen> {
   int _selectedIndex = 0;
   final screens = [
     const UserHistroy(),
-    const dataFiles(),
+    // const dataFiles(),
+    const UserProfile(),
   ];
 
   void _onItemTapped(int index) {
@@ -26,23 +27,23 @@ class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Sago User"),
-        toolbarHeight: 60,
-        backgroundColor: Colors.pink,
-        actions: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: IconButton(
-              onPressed: () {
-                FirebaseAuth.instance.signOut();
-              },
-              icon: const Icon(Icons.exit_to_app),
-              color: Colors.white,
-            ),
-          ),
-        ],
-      ),
+      // appBar: AppBar(
+      //   title: const Text("Sago User"),
+      //   toolbarHeight: 60,
+      //   backgroundColor: Colors.pink,
+      //   actions: <Widget>[
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: IconButton(
+      //         onPressed: () {
+      //           FirebaseAuth.instance.signOut();
+      //         },
+      //         icon: const Icon(Icons.exit_to_app),
+      //         color: Colors.white,
+      //       ),
+      //     ),
+      //   ],
+      // ),
       body: screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed, // Fixed

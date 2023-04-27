@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:sago_user/main_page.dart';
+import 'package:sago_user/screen/authCheck/main_page.dart';
 import 'package:sago_user/services/pdf.service.dart';
 import 'package:sago_user/shared/nodata.dart';
 import 'package:sago_user/widgets/History/tilecard.dart';
@@ -19,6 +19,24 @@ class _UserHistroyState extends State<UserHistroy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Sago User"),
+        toolbarHeight: 60,
+        backgroundColor: Colors.pink,
+        actions: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(
+              onPressed: () {
+                FirebaseAuth.instance.signOut();
+              },
+              icon: const Icon(Icons.exit_to_app),
+              color: Colors.white,
+            ),
+          ),
+        ],
+      ),
+      backgroundColor: const Color(0xFFEBFFD8),
       body: Center(
         child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
