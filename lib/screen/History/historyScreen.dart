@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:sago_user/screen/authCheck/main_page.dart';
 import 'package:sago_user/services/pdf.service.dart';
 import 'package:sago_user/shared/nodata.dart';
 import 'package:sago_user/widgets/History/tilecard.dart';
@@ -20,9 +19,12 @@ class _UserHistroyState extends State<UserHistroy> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Sago User"),
+        title: const Text(
+          "Sago User",
+          style: TextStyle(color: Colors.black),
+        ),
         toolbarHeight: 60,
-        backgroundColor: Colors.pink,
+        backgroundColor: Colors.cyan,
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -31,19 +33,20 @@ class _UserHistroyState extends State<UserHistroy> {
                 FirebaseAuth.instance.signOut();
               },
               icon: const Icon(Icons.exit_to_app),
-              color: Colors.white,
+              color: Colors.black,
             ),
           ),
         ],
       ),
-      backgroundColor: const Color(0xFFEBFFD8),
+      backgroundColor: Colors.white,
+      // backgroundColor: Color.fromARGB(255, 255, 88, 88),
       body: Center(
         child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(
-                height: 20,
+                height: 40,
               ),
               FutureBuilder(
                 future: historyService.get(),
@@ -51,7 +54,7 @@ class _UserHistroyState extends State<UserHistroy> {
                     (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     // Display a loading spinner while waiting for data
-                    return Center(child: CircularProgressIndicator());
+                    return const Center(child: CircularProgressIndicator());
                   } else if (snapshot.hasError) {
                     // Display an error message if the future throws an error
                     return Text("Error: ${snapshot.error}");
@@ -60,7 +63,7 @@ class _UserHistroyState extends State<UserHistroy> {
                     // print("hello ${snapshot.data['Name']}");
                     // Call the function from the instance of MyClass and display the fetched data
                     if (historyData.length == 0) {
-                      return NoData(text: 'No Data Available');
+                      return NoData(text: 'No Bills Available', img: 'https://assets3.lottiefiles.com/packages/lf20_2K2lEIcWwq.json',);
                     } else {
                       // Call the function from the instance of MyClass and display the fetched data
 

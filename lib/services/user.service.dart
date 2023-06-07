@@ -10,7 +10,7 @@ class UserService {
 
     QuerySnapshot userSnapshot =
         await userDocs.where('uid', isEqualTo: uid).get();
-
+    // await userDocs.get();
     userSnapshot.docs.forEach((doc) {
       userData.add(doc.data() as Map);
     });

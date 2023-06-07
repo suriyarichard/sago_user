@@ -423,6 +423,7 @@ class calcListView extends StatelessWidget {
     }
 
     return Card(
+      elevation: 1,
       child: ExpansionTile(
         childrenPadding:
             const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
